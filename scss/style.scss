@@ -65,8 +65,9 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 	justify-content: space-between;
 	align-items: center;
 }
-.calendar__day {
+.calendar__month {
 	text-transform: capitalize;
+	margin-bottom: 1rem;
 }
 .calendar__buttons {
 	display: flex;
@@ -93,4 +94,13 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 	span{
 		padding-bottom: 0.2rem;
 	}
+}
+.week-days {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.week-day {
+	display: block;
+	text-align: center;	
 }

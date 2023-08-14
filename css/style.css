@@ -131,8 +131,9 @@ h1, h2, h3, h4, h5, h6 {
           align-items: center;
 }
 
-.calendar__day {
+.calendar__month {
   text-transform: capitalize;
+  margin-bottom: 1rem;
 }
 
 .calendar__buttons {
@@ -168,4 +169,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 .calendar__time-row span {
   padding-bottom: 0.2rem;
+}
+
+.week-days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.week-day {
+  display: block;
+  text-align: center;
 }
