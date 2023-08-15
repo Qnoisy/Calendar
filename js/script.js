@@ -15,7 +15,6 @@ window.onload = () => {
 		const day = `${MySetDaysOfTheWeek(date.getDay())}, ${MySetMonth(date.getMonth())} ${date.getDate()} ${date.getFullYear()}`;
 		console.log(day);
 		dayToday.innerHTML = day;
-
 	}, 1000)
 }
 
@@ -49,3 +48,21 @@ function MySetMonth(date) {
 	const masMonth = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 	return (masMonth[date]);
 }
+
+function DayOnMonth(n) {
+	const mas = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	return mas[n]
+}
+
+const firstTry = document.querySelector(".mounth-days");
+for (let i = 1; i <= DayOnMonth(date.getMonth()); i++) {
+	const day = document.createElement("li");
+	day.classList.add("mounth-day");
+	if (i == date.getDate()) {
+		day.classList.add("active");
+		console.log(day);
+	}
+	day.append(i);
+	firstTry.append(day);
+}
+console.log(firstTry);
