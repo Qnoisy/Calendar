@@ -53,16 +53,23 @@ function DayOnMonth(n) {
 	const mas = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 	return mas[n]
 }
-
+let j = 1;
 const firstTry = document.querySelector(".mounth-days");
-for (let i = 1; i <= DayOnMonth(date.getMonth()); i++) {
+for (let i = 1; i <= 35; i++) {
 	const day = document.createElement("li");
 	day.classList.add("mounth-day");
 	if (i == date.getDate()) {
 		day.classList.add("active");
 		console.log(day);
 	}
-	day.append(i);
+	if (DayOnMonth(date.getMonth()) < i) {
+		console.log(true);
+		day.append(j++);
+		day.classList.add("default")
+	}
+	else {
+		day.append(i);
+	}
 	firstTry.append(day);
 }
 console.log(firstTry);

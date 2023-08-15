@@ -41,8 +41,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 		padding: 1.5rem;
 	}
 }
-.calendar__body {
-}
+
 .calendar__time {
 	font-size: 3rem;
 	span{
@@ -74,7 +73,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 	justify-content: space-between;
 	align-items: center;
 	gap: 2rem;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 .up {
 	img{
@@ -103,17 +102,26 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 .week-day {
 	display: block;
 	text-align: center;	
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 }
 .mounth-days{
 	display: grid;
 	justify-items:center;
 	grid-template-columns: repeat(7,1fr);
 	grid-template-rows:repeat(5,1fr);
-	row-gap: 1rem;
+	row-gap: 1.5rem;
 }
 .mounth-day{
-
+	padding: auto;
+	border-radius: 2px;
+	width: 20px;
+	text-align: center;
+}
+.mounth-day:hover{
+	-webkit-box-shadow: 0px 0px 0px 5px rgba(53, 150, 58, 1);
+	-moz-box-shadow: 0px 0px 0px 5px rgba(53, 150, 58, 1);
+	box-shadow: 0px 0px 0px 5px rgba(53, 150, 58, 1);
+	border-radius: 2px;
 }
 .active{
 	-webkit-box-shadow: 0px 0px 0px 5px rgba(53, 150, 58, 1);
@@ -124,4 +132,7 @@ h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
 	height: 15px;
 	text-align: center;
 	border-radius: 2px;
+}
+.default{
+	color: gray;
 }
